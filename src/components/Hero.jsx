@@ -2,7 +2,6 @@ import React from 'react'
 import { HERO_CONTENT } from '../constants'
 import myPicture from '../assets/myp.jpg' 
 import { motion } from "motion/react"
-import { delay } from 'motion'
 
 const container = (delay) => ({
     hidden: {x: -100, opacity: 0 },
