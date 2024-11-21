@@ -129,14 +129,6 @@ const Navbar = () => {
                 Projects
               </Link>
             </li>
-            <li>
-              <Link
-                to="/Contact"
-                className="block py-2 px-3 rounded md:p-0 hover:text-cyan-500 hover:font-semibold hover:cursor-pointer"
-              >
-                Contact
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
