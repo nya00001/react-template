@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { motion } from 'motion/react';
 
 const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <nav>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -27,7 +30,8 @@ const Navbar = () => {
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-purple-200 dark:text-purple-400 dark:hover:bg-purple-700 dark:focus:ring-purple-600 hover:bg-cyan-500 hover:cursor-pointer"
           aria-controls="navbar-dropdown"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
+          onClick={() => setMenuOpen((prev) => !prev)}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -46,7 +50,12 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+        <div
+          className={`${
+            isMenuOpen ? 'block' : 'hidden'
+          } w-full md:block md:w-auto`}
+          id="navbar-dropdown"
+        >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
             <li>
               <Link
@@ -65,9 +74,10 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li className="relative group">
+            <li className="relative">
               <button
                 id="dropdownNavbarLink"
+                onClick={() => setDropdownOpen((prev) => !prev)}
                 className="flex items-center justify-between w-full py-2 px-3 rounded md:p-0 md:w-auto hover:text-slate-500 hover:font-semibold hover:cursor-pointer"
               >
                 Resume
@@ -90,9 +100,14 @@ const Navbar = () => {
 
               <div
                 id="dropdownNavbar"
-                className="absolute hidden group-hover:block font-normal divide-y rounded-lg shadow w-44"
+                className={`${
+                  isDropdownOpen ? 'block' : 'hidden'
+                } absolute font-normal divide-y rounded-lg shadow w-44`}
               >
-                <ul className="py-2 text-sm bg-black border border-gray-100 rounded-lg" aria-labelledby="dropdownLargeButton">
+                <ul
+                  className="py-2 text-sm bg-black border border-gray-100 rounded-lg"
+                  aria-labelledby="dropdownLargeButton"
+                >
                   <li>
                     <Link
                       to="/Education"
