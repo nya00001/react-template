@@ -1,6 +1,6 @@
 import React from 'react';
 import { PROJECTS } from '../constants';
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const Projects = () => {
   return (
@@ -70,6 +70,19 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <motion.div whileInView={{ x: 0, opacity: 1 }} 
+              initial={{ x: 100, opacity: 0 }} 
+              transition={{ duration: 1 }}  
+              className="text-center mt-16 mb-16">
+        <a
+          href="https://github.com/nya00001"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-cyan-500 text-black px-6 py-3 font-semibold hover:bg-black hover:text-white hover:border hover:border-white cursor-pointer"
+        >
+          For more projects, check out my GitHub
+        </a>
+      </motion.div>
     </div>
   );
 };

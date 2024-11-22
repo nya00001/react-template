@@ -57,7 +57,7 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Pyralume Project",
-    image: project1,
+    image: project2,
     description:
       "A platform for film festivals, providing event details, movie previews, ticket purchases, and festival management tools. Focused on UX/UI design, accessibility, and modern web technologies for a seamless experience across devices.",
     technologies: ["React", "Typescript", "Next.js", "SASS", "Figma"],
@@ -65,25 +65,31 @@ export const PROJECTS = [
     sourceCode: "https://www.figma.com/design/Y09qY9PgNDLame4F3WkvpD/pyralume-project?t=NZZIlcabJDQTzI2g-0",
   },
   {
-    title: "Seuss Treasury App",
-    image: project2,
+    title: "Wordpress Theme",
+    image: project4,
     description:
       "An interactive web application showcasing Dr. Seuss books using the Seussology API. Includes search functionality, book details, and a responsive design.",
-    technologies: ["React", "Vite", "CSS", "Fetch API"],
+    technologies: ["HTML", "CSS", "PHP", "Wordpress"],
+    liveDemo: "https://dev-cms-ii-final-mok.pantheonsite.io/",
+    sourceCode: "https://github.com/nya00001/PHP-wordpress-theme",
   },
   {
     title: "Taxi VanDirect Website",
     image: project3,
     description:
       "A fully responsive website for an adapted taxi service, designed and built to highlight the company's offerings and facilitate customer bookings.",
-    technologies: ["vue.js", "Tailwind CSS", "vite", "JavaScript"],
+    technologies: ["vue.js", "Tailwind CSS", "vite", "Typescript"],
+    liveDemo: "https://taxivandirect.com/",
+    sourceCode: "https://github.com/nya00001/",
   },
   {
-    title: "Personal Portfolio",
-    image: project4,
+    title: "Capstone Project",
+    image: project1,
     description:
       "A showcase of my projects and skills with a modern, black-and-white aesthetic inspired by classic design. Includes interactive elements and a responsive layout.",
-    technologies: ["Vue.js", "SCSS", "Netlify"],
+    technologies: ["HTML", "CSS", "Bootsrap", "JavaScript"],
+    liveDemo: "https://mtm6302-capstone-nya00001.vercel.app/",
+    sourceCode: "https://github.com/nya00001/mtm6302-capstone-nya00001",
   },
 ];
 
