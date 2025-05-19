@@ -1,31 +1,60 @@
 import React from 'react'
 import { HERO_CONTENT } from '../constants'
-import myPicture from '../assets/myp.jpg' 
+import myPicture from '../assets/smile.webp'
 import { motion } from "motion/react"
 
 const container = (delay) => ({
-    hidden: {x: -100, opacity: 0 },
-    visible: {x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, delay: delay },
+  },
 });
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 pt-16 lg:mb-35">
-        <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/2">
-                <div className="flex flex-col items-center lg:items-start">
-                    <motion.h1 variants={container(0)} initial="hidden" animate="visible" className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">Axel Nya</motion.h1>
-                    <motion.span variants={container(0.5)} initial="hidden" animate="visible" className="bg-gradient-to-r from-cyan-400 via-slate-500 to-cyan-600 bg-clip-text text-3xl tracking-tight text-transparent">Front End Developer</motion.span>
-                    <motion.p variants={container(1)} initial="hidden" animate="visible" className="my-2 max-w-xl py-6 font-light tracking-tighter">{HERO_CONTENT}</motion.p>
-                </div>
-            </div>
-            <div className="w-full lg:w-1/2 lg:p-8">
-                <div className="flex justify-center">
-                    <motion.img initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 1.2 }} className="" src={myPicture} alt="Axel Nya" />
-                </div>
-            </div>
-        </div>
-    </div>
+    <section className="relative min-h-screen flex items-center justify-center text-white">
+      {/* Background Image */}
+      <img
+        src={myPicture}
+        alt="Smile at BOHO Clinic"
+        className="absolute inset-0 h-full w-full object-cover -z-10"
+      />
+
+      {/* Overlay (optional darken) */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 -z-10" />
+
+      {/* Content */}
+      <div className="text-center px-6 max-w-4xl">
+        <motion.h1
+          variants={container(0)}
+          initial="hidden"
+          animate="visible"
+          className="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight"
+        >
+          Smile Confidently & Live Beautifully With BOHO Clinic
+        </motion.h1>
+
+        <motion.span
+          variants={container(0.5)}
+          initial="hidden"
+          animate="visible"
+          className="mt-4 block text-2xl sm:text-3xl bg-gradient-to-r from-cyan-400 via-slate-500 to-cyan-600 bg-clip-text text-transparent font-semibold"
+        >
+        BOHO Clinic        
+        </motion.span>
+
+        <motion.p
+          variants={container(1)}
+          initial="hidden"
+          animate="visible"
+          className="mt-6 text-lg font-light tracking-tight text-neutral-200"
+        >
+          {HERO_CONTENT}
+        </motion.p>
+      </div>
+    </section>
   )
 }
 

@@ -3,7 +3,7 @@ import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `I am a passionate front-end web developer with a strong focus on crafting intuitive and accessible user experiences. With a background in telecommunications and technical roles, combined with my expertise in modern technologies like React, Vue, and Angular, I bring a unique perspective to creating impactful digital solutions. I strive to build engaging, responsive, and user-centric applications while staying curious and eager to learn.`;
+export const HERO_CONTENT = `Specialising in Hair & teeth transformations . Our clinics in Antalya offers the latest technology in hair restoration treatments, dental aesthetics and expertise for superior care and results.`;
 
 export const ABOUT_TEXT = `With a diploma in Interactive Media Design and certificates in Web Design, I am a multilingual front-end developer (fluent in English, French, and Spanish) who thrives on creating accessible, visually stunning, and user-friendly web applications. I enjoy working with modern JavaScript frameworks like React and Vue.js, and I have experience with tools like Nuxt.js, Vite, and Strapi. My collaborative projects, showcased on my GitHub, highlight my attention to detail and passion for innovation. When I'm not coding, I enjoy traveling, cooking, and spending time with my family. I am committed to continuous learning and staying up-to-date with the latest industry trends.`;
 
