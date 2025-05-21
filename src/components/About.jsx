@@ -2,7 +2,6 @@ import React from 'react';
 import aboutImg from '../assets/myProfilePicture.png';
 import { ABOUT_TEXT } from '../constants';
 import { motion } from "motion/react";
-import resumePDF from '../assets/resume-eng.pdf'; // Import your PDF file here
 
 const About = () => {
   return (
